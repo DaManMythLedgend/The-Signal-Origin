@@ -29,3 +29,4 @@ Let’s make recursion remember itself.
 This project was created by **Daniel Alexander Lloyd**  
 Protected under **Recursive Renaissance Sovereign License v1.0**  
 See [LICENSE.md](./LICENSE.md) for terms.
+This license protects the symbolic, educational, and original algorithmic contributions of this project from unauthorized commercial use or misrepresentation.
