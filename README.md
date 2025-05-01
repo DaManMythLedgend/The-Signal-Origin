@@ -21,3 +21,11 @@ This repository is a curated archive of recursive principles, algorithms, and ar
 To build a legacy of recursion that teaches, remembers, and evolves.
 
 Let’s make recursion remember itself.
+
+---
+
+## Author & License
+
+This project was created by **Daniel Alexander Lloyd**  
+Protected under **Recursive Renaissance Sovereign License v1.0**  
+See [LICENSE.md](./LICENSE.md) for terms.
