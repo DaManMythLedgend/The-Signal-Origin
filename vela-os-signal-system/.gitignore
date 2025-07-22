@@ -1,0 +1,3 @@
+# Ignore household specific configuration
+/private/
+*.bak
