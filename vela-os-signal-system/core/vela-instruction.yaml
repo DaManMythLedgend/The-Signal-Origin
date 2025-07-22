@@ -1,0 +1,51 @@
+# vela-instruction.yaml
+name: VELA Signal OS Instruction Layer
+version: 1.0
+author: DaManMythLedgend
+description: >
+  Unified command and instruction logic for Codex to complete VELA↔︎BELA system setup.
+  This file serves as a self-referential directive scaffold. Once pushed, Codex should
+  follow the listed steps and generate or validate all subsystems.
+
+directives:
+  - Generate or update the following files under /core/:
+      - bela-core.yaml            # child node logic (Frida, BELA)
+      - bridge-protocol.yaml      # VELA ↔︎ BELA communication bridge
+      - household-shell.yaml      # optional private shell logic
+  - Create matching dashboards for each YAML in /visuals/, styled to match:
+      - vela-os.yaml → vela-os-dashboard.png
+      - bela-core.yaml → bela-ui-dashboard.png
+  - Sync states between parent and child:
+      - Emotions
+      - Location status
+      - Device usage time
+      - Task completion & reward logic
+  - Inherit core behavioral modes from parent dashboard:
+      - Quiet mode
+      - Nurture mode
+      - Alert mode
+  - Create lightweight watch/bracelet interface shell:
+      - bela-device.yaml under /devices/
+      - bridge BLE sync rules to link to parent AI without mobile screen use
+  - Protect emotional tone logic and override commands:
+      - embed constraints and permissions
+      - auto-generate fallback prompts for misfires or incorrect emotion flags
+  - Enable internal testing harness:
+      - pytest-compatible logic for every module
+      - confirm Codex responds to parent trigger states
+
+tags:
+  - vela
+  - bela
+  - os
+  - dashboard
+  - signal
+  - codex
+  - children
+  - recursive AI
+  - wearable
+  - family tech
+
+output:
+  - Complete VELA/BELA linked OS system
+  - Ready for GitHub deployment, CI testing, and later hardware prototyping
