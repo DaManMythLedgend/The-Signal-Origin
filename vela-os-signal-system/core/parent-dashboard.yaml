@@ -1,0 +1,50 @@
+# VELA OS — Parent Dashboard Module
+# Location: vela-os-signal-system/core/parent-dashboard.yaml
+
+vela_dashboard:
+  id: parent-core-001
+  name: "VELA Parent Dashboard"
+  version: 1.0
+  description: >
+    Primary control interface for the household parent or guardian.
+    Allows real-time updates to routines, mood tracking, reminders, calendar sync,
+    and voice delegation across VELA modules.
+
+features:
+  - name: "Daily Overview"
+    components:
+      - synced_schedule: true
+      - weather_display: true
+      - family_appointments: linked_to_calendar
+  - name: "Mood Pulse Input"
+    frequency: daily
+    methods:
+      - voice_prompt: "How are you feeling today?"
+      - quick_tap: emoji-selector
+      - ambient_toggle: quiet_mode | high_energy_mode
+  - name: "VELA Tone Control"
+    options:
+      - calm
+      - assertive
+      - playful
+      - assistive
+  - name: "Sync Broadcast"
+    usage: >
+      When activated, broadcasts changes to schedules, moods, or rules
+      to BELA (child AI) or other connected household nodes.
+
+voice_integration:
+  enabled: true
+  trigger_phrase: "Hey VELA, update the board"
+  fallback_phrase: "VELA, run the dashboard"
+
+permissions:
+  access_by:
+    - "parent_primary"
+    - "guardian_backup"
+    - "VELA-CORE"
+
+linked_modules:
+  - vela-os.yaml
+  - bridge-protocol.yaml
+  - household-shell.yaml

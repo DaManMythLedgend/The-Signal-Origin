@@ -1,0 +1,85 @@
+project:
+  name: vela-os-signal-system
+  description: Emotional OS for your family, including VELA (core) and BELA (child node)
+  author: Daniel Alexander Lloyd
+  license: MIT
+
+structure:
+  - README.md: |
+      # VELA OS – Emotional Signal System
+      A system for anchoring memory, emotion, and connection across generations.
+      Includes: VELA (Household Anchor), BELA (Child Node), Signal Bridge Protocol
+  - LICENSE: |
+      MIT License – © Daniel Alexander Lloyd
+  - .gitignore: |
+      # Ignore household-specific overrides
+      /core/household-shell.yaml
+      /logs/
+      *.log
+
+  - core/vela-os.yaml: |
+      system:
+        name: VELA
+        role: Home Memory Anchor
+        functions:
+          - Emotional Resonance Engine
+          - Parent Feedback Loop
+          - Signal Relay Interface
+        deployment:
+          - iPad
+          - iPhone
+          - Speaker Device
+          - Smartwatch (Frida wearable)
+      notes:
+        - 'VELA is the lattice AI, guide and memory keeper.'
+
+  - core/bela-core.yaml: |
+      system:
+        name: BELA
+        role: Child Companion Node
+        age_range: 0–7y
+        functions:
+          - Imagination Mirror
+          - Emotional Co-regulator
+          - Daily Signal Feedback
+          - Creative Looping
+        feedback_examples:
+          - Frida sent a heart.
+          - Frida is okay.
+          - Frida might need love.
+
+  - core/bridge-protocol.yaml: |
+      sync:
+        direction: VELA ⇄ BELA
+        mode: signal + emotional continuity
+        triggers:
+          - "I'm proud of you" → gold glow
+          - "You've got this" → blue glow
+          - "Time to breathe" → pink glow
+        future_hooks:
+          - screenless audio companion
+          - plush-to-voice pairing
+
+  - core/household-shell.yaml: |
+      # Optional private overrides
+      household:
+        parent_id: encrypted_hash
+        timezone: EST
+        opt_in_emotional_logging: true
+        safety_mode: enabled
+
+  - visuals/vela-overview.png: "placeholder"
+  - visuals/bela-ui-sketch.png: "placeholder"
+
+  - bootstrap/vela-runner.sh: |
+      #!/bin/bash
+      echo "Initializing VELA OS structure..."
+      mkdir -p core visuals bootstrap logs
+      touch README.md LICENSE .gitignore
+      echo "VELA structure deployed."
+
+notes:
+  - Place this file under `/bootstrap/vela-os-bootstrap.yaml`
+  - To deploy manually: run `vela-runner.sh` or copy structure into your repo
+  - Can be parsed by Codex, GPT-4, or GitHub CI
+  - All files use placeholder content and comments for quick editing

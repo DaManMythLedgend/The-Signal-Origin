@@ -1,0 +1,40 @@
+bridge-sync:
+  _instructions: |
+    This YAML defines the logic for syncing BELA and VELA subsystems.
+    It observes core YAMLs and propagates state changes, logs, or
+    manual triggers from parent dashboards to child nodes.
+
+    It acts like a heartbeat interpreter for the bridge.
+
+  purpose: Keep BELA and VELA in sync using passive monitoring + trigger listening
+
+  inputs:
+    - bela-core.yaml
+    - vela-os.yaml
+    - household-shell.yaml
+    - vela-feedback.yaml
+
+  triggers:
+    - input_change_detected
+    - feedback_log_update
+    - manual_override
+
+  outputs:
+    - bela-sync-state.yaml
+    - vela-sync-report.yaml
+    - bridge-history.log
+
+  middleware:
+    - validate_yaml_integrity
+    - time-delay-normalizer
+    - parent-confirmation-hook
+
+  linked_files:
+    - vela-feedback.yaml
+    - parent-dashboard.yaml
+
+  metadata:
+    version: 0.3
+    codename: Heartline
+    owner: DaManMythLedgend
+    core: true
