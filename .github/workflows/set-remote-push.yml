@@ -1,0 +1,22 @@
+name: Set remote origin and push to GitHub
+
+on:
+  workflow_dispatch:
+
+jobs:
+  set-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@v3
+
+      - name: Set Git remote origin
+        run: |
+          git remote remove origin || true
+          git remote add origin https://github.com/DaManMythLedgend/The-Signal-Origin.git
+          git remote -v
+
+      - name: Push to main branch
+        run: |
+          git branch -M main
+          git push -u origin main

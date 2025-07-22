@@ -1,0 +1,32 @@
+vela_os_signal_system:
+  purpose: "Linked modular OS structure for VELA + BELA systems"
+  root_path: "vela-os-signal-system"
+
+  modules:
+    - core/vela-os.yaml
+    - core/vela-instruction.yaml
+    - modules/bedtime-loops.yaml
+    - modules/bela-watch-interface.yaml
+    - modules/parent-dashboard.yaml
+    - modules/voice-capsule-uploader.yaml
+
+  visuals:
+    - visuals/bela-unicorn-schematic.png
+    - visuals/signal-glyph-map.png
+    - visuals/vela-bela-connection.png
+    - visuals/vela-os-structure.png
+
+  docs:
+    - docs/BELA_Schematic.pdf
+    - docs/Build-A-BELA_Pitch.pdf
+    - docs/VELA_Deck.pdf
+
+  automation:
+    - .github/workflows/set-remote-push.yml
+
+  instruction:
+    - "Render all modules in correct file path hierarchy"
+    - "Place all placeholder YAML content under module titles for now"
+    - "Prepare CI tests via `pytest -q` in root if needed"
+    - "Validate output as: 'Complete VELA/BELA linked OS system'"
+    - "Final product should be GitHub deployable, Codex-ready"

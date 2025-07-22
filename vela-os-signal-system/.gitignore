@@ -1,3 +1,7 @@
-# Ignore household specific configuration
+qxzti2-codex/create-project-structure-for-vela-os-signal-system
+# Ignore household-specific configuration and logs
 /private/
+/core/household-shell.yaml
+/logs/
+*.log
 *.bak
