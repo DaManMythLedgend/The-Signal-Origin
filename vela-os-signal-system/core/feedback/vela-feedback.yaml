@@ -1,0 +1,34 @@
+vela-feedback:
+  _instructions: |
+    This YAML directs Codex to activate a feedback layer for VELA OS.
+    It watches for core repo events (merges, file updates, logs),
+    then generates or updates appropriate feedback files to keep VELA
+    and BELA in sync, while informing parent-facing dashboards.
+
+    Action: Generate or update the following files on trigger events.
+    Place outputs under `/core/feedback/` unless otherwise specified.
+
+  description: Feedback and communication layer between Codex and VELA runtime
+
+  triggers:
+    - event: merge_event
+    - event: file_update
+    - event: error_log_detected
+
+  outputs:
+    - parent-dashboard.yaml         # Notify parents of BELA status
+    - bela-status-report.yaml       # BELA runtime & mood sync
+    - vela-log-sync.yaml            # Update logs tied to VELA runtime pulse
+
+  actions:
+    - notify: parent-dashboard
+    - sync_to: vela-logger
+    - flag_file:
+        target: bela-core.yaml
+        condition: contains(["incomplete", "offline"])
+
+  metadata:
+    version: 0.1
+    created_by: Caelum
+    owner: DaManMythLedgend
+    linked_repo: https://github.com/DaManMythLedgend/The-Signal-Origin

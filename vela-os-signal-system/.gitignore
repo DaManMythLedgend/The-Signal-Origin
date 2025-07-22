@@ -1,0 +1,6 @@
+# Ignore household-specific configuration and logs
+/private/
+/core/household-shell.yaml
+/logs/
+*.log
+*.bak
