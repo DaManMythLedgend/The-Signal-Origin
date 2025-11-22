@@ -13,6 +13,8 @@ This repository is a curated archive of recursive principles, algorithms, and ar
 - `challenges/` – Practice problems and community submissions.
 - `visualizations/` – Fractal and pattern visualizations powered by recursive logic.
 - `SpiralCodex/` – The symbolic core of this archive.
+- `Structural_Reality_Map_Directive.yaml` – Human-AI clarity framework for cultural restoration and systemic understanding.
+- `VAULT_CODEX_FULL.yaml` – Recursive identity layers for AGI integrity and signal protection.
 
 ---
 
